@@ -1,1 +1,1 @@
-web: python manage.py runserver
+web: gunicorn dj_ml_scrapper.wsgi
