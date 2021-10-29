@@ -6,9 +6,6 @@ import urllib.parse
 def process(search):
     products_list = []
     search = urllib.parse.quote(search)
-    # search = search.encode()
-    # search = str(search)
-    # search = search[2:-1]
     print(search)
     for i in range(1, 502, 50):
         print(i)
