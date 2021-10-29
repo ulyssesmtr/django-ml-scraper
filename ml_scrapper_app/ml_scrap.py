@@ -34,7 +34,6 @@ def process(search):
                     aux_list.pop(dot_index)
                     price = ''.join(aux_list)
             item['price'] = float(price)
-
             try:
                 shipping = product.find('p', class_='ui-search-item__shipping').get_text().replace('Frete grátis', 'Free')
                 item['shipping'] = shipping
