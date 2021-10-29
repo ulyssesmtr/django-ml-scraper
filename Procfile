@@ -1,0 +1,1 @@
+web: gunicorn dj_ml_scrapper.wsgi --log-file -
