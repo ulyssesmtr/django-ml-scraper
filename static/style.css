@@ -1,0 +1,70 @@
+html {
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1{
+    margin-right: 280px;
+    margin-left: 120px;
+    color: #00517F;
+    font-size: 22px;
+}
+.home {
+    align-self: flex-end;
+    text-decoration: none;
+    color: #00517F;
+    font-weight: bold;
+}
+
+.container {
+    color: #00517F;
+    width: 500px;
+    margin-top: 50px;
+    padding: 7px;
+    border: 1px solid #00517F;
+    border-radius:10px;
+    
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    height: 100vh
+}
+main{
+    background-color: #EEEEEE;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+}
+
+form{
+    margin-top: 100px;
+    color: #00517F;
+}
+
+table {
+    margin: 20px 0 40px;
+}
+
+thead, tr:last-child {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+.alinhamento{
+    text-align: right;
+}
+

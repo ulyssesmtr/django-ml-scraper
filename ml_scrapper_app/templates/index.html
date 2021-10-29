@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'reset.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Mercado Livre Scrapper</title>
+</head>
+<body>
+    <header>
+            <img src="{% static 'logo.png' %}">
+            <h1>Mercado Livre Scrapping   </h1>
+            <a class="home" href="{% url 'index' %}">Home</a>
+    </header>
+    <main>
+        <div class="container">
+            <p>The input below gets the typed content and searches for it on mercadolivre.com.br.
+                The server then looks for the first 500 results and shows them on a table, displaying
+                their names, prices and shipping information. (It may take a few seconds.)
+            </p>
+        </div>
+        <form action="result" method="post">
+            {% csrf_token %}
+            <label for="url">Search: </label>
+            <input type="text" id="url_search" name="url_search" class="input-url" required>
+            <input type="submit" value="Submit" class="submit-buttom">
+        </form>
+    </main>
+    
+</body>
+</html>
