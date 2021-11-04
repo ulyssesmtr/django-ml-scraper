@@ -44,6 +44,6 @@ def process(search):
     output_df = pd.DataFrame(products_list)
     free_shipping_count = output_df.shipping.value_counts().Free
     paid_shipping_count = output_df.shipping.value_counts().Paid
-    new_row = {'name': '', 'price': f'Average Price: {output_df["price"].mean()}', 'shipping': f'Paid: {paid_shipping_count} - Free: {free_shipping_count}'}
+    new_row = {'name': '', 'price': f'Average Price: {output_df["price"].mean():.2f}', 'shipping': f'Paid: {paid_shipping_count} - Free: {free_shipping_count}'}
     output_df = output_df.append(new_row, ignore_index=True)
     return output_df
