@@ -21,14 +21,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-o$jqjy8x+*ph!1-u@ivqgt(1x&6paw#mll3*djzd17z*c1j8hk'
-
+ROOT_URLCONF = 'dj_ml_scrapper.urls'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
 
+
 # Application definition
+COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
 
 INSTALLED_APPS = [
     'ml_scrapper_app',
@@ -50,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'dj_ml_scrapper.urls'
+
 
 TEMPLATES = [
     {
